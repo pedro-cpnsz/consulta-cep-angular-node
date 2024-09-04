@@ -8,7 +8,7 @@ export const routes: Routes = [
         component: CepComponent
     },
     {
-        path: '', 
+        path: 'home', 
         component: HomeComponent
     }
 ];
