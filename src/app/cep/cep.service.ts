@@ -1,6 +1,7 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { url } from 'inspector';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,11 @@ export class CepService {
     this.http = new HttpClient(handler)
   }
 
-  public consultaCep() {
+  public consultaCep(cep: string): Observable<any> {
 
     let url = 'https://viacep.com.br/ws/';
 
-    return this.http.get(url + 85807860 + '/json').toPromise();
+    return this.http.get<any>(`${url}/${cep}/json/`);
   }
 
 }

@@ -1,44 +1,37 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Angular</title>    
-</head>
-
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-  
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
   * {
-     font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     margin: 0;
     padding: 0;
   }
-  
-  .container{
-      width: 100%;
-      margin: 0 auto;
-      background: #e5e9f5;
-      padding: 10px;
-      height: 100vh;
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    background: #e5e9f5;
+    padding: 10px;
+    height: 100vh;
   }
-  
-  .container h1, .container p{
-      text-align: center;
-      color: #4b4a3f;
+
+  .container h1,
+  .container p {
+    text-align: center;
+    color: #4b4a3f;
   }
-  
-  .container a{
-      text-decoration: none;
-      color: #4b4a3f;
+
+  .container a {
+    text-decoration: none;
+    color: #4b4a3f;
   }
-  
-  .container a:hover{
-      text-decoration: underline;
+
+  .container a:hover {
+    text-decoration: underline;
   }
 
   .botoes {
@@ -47,29 +40,25 @@
     margin-top: 10%;
   }
 
-  .botoes button {
+  .botoes a {
     font-size: large;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
   }
 
   .separador {
     width: 80px;
   }
-  </style>
+</style>
 
-<body>
+  <div class="container">
+    <h1>Atividade Angular</h1>
+    <p>Selecione uma opção abaixo</p>
 
-    <div class="container">
-    
-        <h1>Atividade Angular</h1>
-        <p>Selecione uma opção abaixo</p>
-
-        <div class="botoes">
-          <a routerLink="/cep">Buscar CEP</a>
-          <div class="separador"></div>
-          <a routerLink="/post">Buscar Posts</a>
-        </div>
-
+    <div class="botoes">
+      <a routerLink="/cep">Buscar CEP</a>
+      <div class="separador"></div>
+      <a routerLink="/posts">Buscar Posts</a>
     </div>
-
-</body>
-</html>
+  </div>

@@ -1,1 +1,94 @@
-<p>posts works!</p>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+  * {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  table.zebra {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table.zebra thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    font-weight: bold;
+    background-color: #bbb;
+    color: #000;
+  }
+
+  table.zebra td {
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  table.zebra tr:nth-child(even) {
+    background-color: #ddd;
+  }
+
+  table.zebra tr:hover {
+    background-color: #bbb;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    background: #e5e9f5;
+    padding: 10px;
+    height: 100vh;
+  }
+
+  .container h1,
+  .container p {
+    text-align: center;
+    color: #4b4a3f;
+  }
+
+  .botao-voltar {
+    width: 80%;
+    margin: 0 auto;
+    align-items: start;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .voltar {
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #4b4a3f;
+  }
+</style>
+
+<div class="container">
+    <div class="botao-voltar">
+        <a routerLink="" class="voltar">Voltar</a>
+      </div>
+  <table class="zebra">
+    <thead>
+      <tr>
+        <td id="userId">User ID</td>
+        <td id="id">ID</td>
+        <td>Título</td>
+        <td>Mensagem</td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts">
+          <td>{{ post.userId }}</td>
+          <td>{{ post.id }}</td>
+          <td>{{ post.title }}</td>
+          <td>{{ post.body }}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
